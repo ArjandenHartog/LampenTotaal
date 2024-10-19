@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welkom</title>
+    <title>LampenTotaal</title>
     <style>
         * {
             margin: 0;
@@ -44,29 +44,38 @@
             z-index: 2;
             position: relative;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100% - 160px); 
-        }
-        .container1 {
-            text-align: center;
-            position: relative;
-            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: calc(100% - 160px); 
         }
 
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+        }
+
         .btn {
             display: inline-block;
-            margin: 20px;
-            padding: 20px 40px;
+            padding: 10px;
             font-size: 24px;
             color: #fff;
             background-color: #ffb234;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 30px;
             transition: all 0.3s ease;
+            width: 280px;
+            height: 175px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn img {
+            width: 190px;
+
         }
 
         .btn:hover {
@@ -129,12 +138,26 @@
             right: 15%;
         }
 
+        .circle:nth-child(4) {
+            width: 250px;
+            height: 250px;
+            top: 20%;
+            right: 20%;
+        }
+
+        .circle:nth-child(5) {
+            width: 180px;
+            height: 180px;
+            top: 60%;
+            left: 20%;
+        }
+
         @keyframes move {
             0% {
                 transform: translateY(0) translateX(0);
             }
             50% {
-                transform: translateY(-200px) translateX(200px);
+                transform: translateY(-50px) translateX(50px);
             }
             100% {
                 transform: translateY(0) translateX(0);
@@ -149,20 +172,32 @@
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
     </div>
 
-    <header class="header">Welkom</header>
+    <header class="header">Welkom in onze showroom!</header>
 
     <div class="container">
-        <a href="https://www.pietvanwalsem.nl/" class="btn">Piet van Walsem</a>
-        <a href="https://www.lampentotaal.nl/" class="btn btn-2">Lampen Totaal</a>
-    </div>
-    <div class="container1">
-        <a href="https://www.pietvanwalsem.nl/" class="btn">Piet van Walsem</a>
-        <a href="https://www.lampentotaal.nl/" class="btn btn-2">Lampen Totaal</a>
+        <div class="btn-group">
+            <a href="https://www.pietvanwalsem.nl/" class="btn">
+                <img src="https://cdn.webshopapp.com/shops/283573/themes/173636/v/183387/assets/logo.png?20200813153542" alt="Piet van Walsem">
+            </a>
+            <a href="https://www.lampentotaal.nl/" class="btn btn-2">
+                <img src="https://www.lampentotaal.nl/image/top_nl_be_new/64804ff4-9caf-422f-92dd-4de7fc103a32.png?size=medium" alt="Lampen Totaal">
+            </a>
+        </div>
+
+        <div class="btn-group">
+            <a href="https://cilinderservice.com/?utm_source=nauta.com&utm_medium=menu-button" class="btn">Cilinder Service</a>
+            </a>
+            <a href="https://intersteel.nl/assortiment/" class="btn btn-2">
+                <img src="https://intersteel.nl/packages/intersteel/themes/intersteel/images/intersteel-logo.png" alt="InterSteel">
+            </a>
+        </div>
     </div>
 
-    <footer class="footer">© 2024 Lampen Totaal</footer>
+    <footer class="footer">© 2024 LampenTotaal</footer>
 
 </body>
 </html>
