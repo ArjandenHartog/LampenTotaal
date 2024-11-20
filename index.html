@@ -13,16 +13,12 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <!-- Install this snippet AFTER the Tracking code. -->
-    <script>
-        var userId = your_user_id || null; // Replace your_user_id with your own if available.
-        window.hj('identify', userId, {
-            // Add your own custom attributes here. Some EXAMPLES:
-            // 'Signed up': '2019—06-20Z', // Signup date in ISO-8601 format.
-            // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
-            // 'Total purchases': 15, // Send numbers without quotes.
-            // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
-            // 'Last refund date': null, // Send null when no value exists for a user.
-        });
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "p0m25n98fl");
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,17 +39,17 @@
 
     <div class="container">
         <div class="btn-group">
-            <a href="https://www.pietvanwalsem.nl/" class="btn btn-pvw">
+            <a href="https://www.pietvanwalsem.nl/" class="btn btn-pvw animated-btn">
                 <img src="https://cdn.webshopapp.com/shops/283573/themes/173636/v/183387/assets/logo.png?20200813153542" alt="Piet van Walsem">
             </a>
-            <a href="https://www.lampentotaal.nl/" class="btn btn-2">
+            <a href="https://www.lampentotaal.nl/" class="btn btn-2 animated-btn">
                 <img src="https://www.lampentotaal.nl/image/top_nl_be_new/64804ff4-9caf-422f-92dd-4de7fc103a32.png?size=medium" alt="Lampen Totaal">
             </a>
         </div>
 
         <div class="btn-group">
-            <a href="https://cilinderservice.com/?utm_source=nauta.com&utm_medium=menu-button" class="btn btn-pvw">Cilinder Service</a>
-            <a href="https://intersteel.nl/assortiment/" class="btn btn-2">
+            <a href="https://cilinderservice.com/?utm_source=nauta.com&utm_medium=menu-button" class="btn btn-pvw animated-btn">Cilinder Service</a>
+            <a href="https://intersteel.nl/assortiment/" class="btn btn-2 animated-btn">
                 <img src="output-onlinepngtools.png" alt="InterSteel">
             </a>
         </div>
