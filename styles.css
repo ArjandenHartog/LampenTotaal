@@ -16,7 +16,7 @@ body, html {
 .header {
     text-align: center;
     font-size: 65px;
-    padding: 30px;
+    padding: 15px; /* Changed from 30px to 15px */
     background-color: transparent;
     z-index: 2;
 }
