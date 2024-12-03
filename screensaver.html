@@ -1,110 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <script>
-            (function (h, o, t, j, a, r) {
-                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-                h._hjSettings = { hjid: 5212197, hjsv: 6 };
-                a = o.getElementsByTagName('head')[0];
-                r = o.createElement('script'); r.async = 1;
-                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-        </script>
-        <script type="text/javascript">
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "p0m25n98fl");
-        </script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/images/favicon.ico">
-        <title>Screensaver</title>
-        <link rel="stylesheet" href="/styles.css">
-    </head>
-<body class="screensaver-page">
-    <div class="screensaver" style="display: flex;">
-        <div class="screensaver-content">
-            <img src="https://lektuinmaterialen.nl/wp-content/uploads/2021/07/disc-wall_atmospheric-photography-3.jpg" class="active" alt="Slide 1">
-            <img src="https://lektuinmaterialen.nl/wp-content/uploads/2018/09/10-2.jpg" alt="Slide 2">
-            <img src="https://www.tuintotaal.nl/wp-content/uploads/2022/06/In-Lite-12V-sfeer-Nero-SG-Tuintotaal.jpg" alt="Slide 3">
-            <img src="https://smart-lighting.es/wp-content/uploads/2024/01/0-modelec-coleccion-m.jpg" alt="Slide 4">
-            <img src="https://www.deurbeslag.nl/media/wysiwyg/pagina/intersteel/intersteel-merkenpagina-sfeer-deurkruk-zwart.jpg" alt="Slide 5">
-            <img src="https://www.deurbeslagstore.be/media/wysiwyg/pagina/intersteel/intersteel-merkenpagina-sfeer-voordeurbeslag.jpg" alt="Slide 6">
-            <img src="https://www.nauta.com/media/wysiwyg/Groothandel-cilinders.jpg" alt="Slide 7">
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let clickCount = 0;
-
-            if (localStorage.getItem('isFullscreen') === 'true') {
-                if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen();
-                } else if (document.documentElement.mozRequestFullScreen) { 
-                    document.documentElement.mozRequestFullScreen();
-                } else if (document.documentElement.webkitRequestFullscreen) { 
-                    document.documentElement.webkitRequestFullscreen();
-                } else if (document.documentElement.msRequestFullscreen) { 
-                    document.documentElement.msRequestFullscreen();
-                }
-            }
-
-            const mediaElements = document.querySelectorAll('.screensaver-content img, .screensaver-content video');
-            let currentIndex = 0;
-
-            function showNext() {
-                mediaElements.forEach(element => {
-                    element.classList.remove('active');
-                    if (element.tagName === 'VIDEO') {
-                        element.pause();
-                        element.currentTime = 0;
-                    }
-                });
-
-                const current = mediaElements[currentIndex];
-                current.classList.add('active');
-
-                if (current.tagName === 'VIDEO') {
-                    current.play();
-                    current.onended = () => {
-                        currentIndex = (currentIndex + 1) % mediaElements.length;
-                        showNext();
-                    };
-                } else {
-                    setTimeout(() => {
-                        currentIndex = (currentIndex + 1) % mediaElements.length;
-                        showNext();
-                    }, 5000);
-                }
-            }
-
-            showNext();
-
-            document.addEventListener('click', function() {
-                clickCount++;
-                
-                if (clickCount === 1) {
-  
-                    if (document.documentElement.requestFullscreen) {
-                        document.documentElement.requestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) { 
-                        document.documentElement.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) { 
-                        document.documentElement.webkitRequestFullscreen();
-                    } else if (document.documentElement.msRequestFullscreen) { 
-                        document.documentElement.msRequestFullscreen();
-                    }
-                } else if (clickCount === 2) {
-                 
-                    localStorage.removeItem('isFullscreen');
-                    window.location.href = 'index.html';
-                }
-            });
-        });
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removed</title>
+</head>
+<body>
+    <p>This page has been removed.</p>
 </body>
 </html>

@@ -47,7 +47,7 @@
 
         <div class="btn-group">
             <a href="https://hivecpqpublic.com/#/configurations/ccaf393f466f41208b6520b7187e9296?languageCode=nl" class="btn btn-pvw animated-btn">
-                <img src="https://www.deurbeslagstore.be/media/wysiwyg/pagina/nauta/merk-nauta.png" alt="Cilinder service">
+                <img src="/images/merk-nauta-white.png" alt="Cilinder service">
             </a>
             <a href="https://intersteel.nl/assortiment/" class="btn btn-2 animated-btn">
                 <img src="output-onlinepngtools.png" alt="InterSteel">
@@ -75,24 +75,46 @@
             <span>Made by <a href="https://arjandenhartog.com" target="">Arjan den Hartog</a></span>
         </div>
         <div class="footer-right">
-            <a href="screensaver.html" class="screensaver-btn">Screensaver</a>
+            <!-- Removed screensaver button -->
         </div>
     </footer>
 
     <script>
-        document.getElementById('fullscreen-btn').addEventListener('click', function() {
-            localStorage.setItem('isFullscreen', 'true');
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.mozRequestFullScreen) { 
-                document.documentElement.mozRequestFullScreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { 
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) { 
-                document.documentElement.msRequestFullscreen();
-            }
-        });
-    </script>
+        function toggleFullScreen() {
+            const doc = window.document;
+            const docEl = doc.documentElement;
 
+            const requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+            const cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+            if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+                if (docEl.requestFullscreen) {
+                    docEl.requestFullscreen();
+                } else if (docEl.msRequestFullscreen) {
+                    docEl.msRequestFullscreen();
+                } else if (docEl.mozRequestFullScreen) {
+                    docEl.mozRequestFullScreen();
+                } else if (docEl.webkitRequestFullscreen) {
+                    docEl.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            }
+        }
+
+        // Fullscreen knop
+        document.getElementById('fullscreen-btn').addEventListener('click', toggleFullScreen);
+        document.getElementById('fullscreen-btn').addEventListener('touchend', toggleFullScreen);
+
+        // Automatische fullscreen bij eerste interactie
+        function handleFirstInteraction() {
+            toggleFullScreen();
+            document.removeEventListener('touchend', handleFirstInteraction);
+            document.removeEventListener('click', handleFirstInteraction);
+        }
+
+        document.addEventListener('touchend', handleFirstInteraction, { once: true });
+        document.addEventListener('click', handleFirstInteraction, { once: true });
+
+        // Removed idle timer code
+    </script>
 </body>
 </html>

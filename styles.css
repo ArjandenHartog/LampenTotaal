@@ -60,18 +60,7 @@ body, html {
 }
 
 .screensaver-btn {
-    background-color: #4c1e4a;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    display: none;
 }
 
 .screensaver-btn:hover {
@@ -261,18 +250,7 @@ body, html {
 }
 
 .screensaver-btn {
-    background-color: #4c1e4a;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    display: none;
 }
 
 .screensaver-btn:hover {
@@ -442,29 +420,46 @@ body, html {
 
 .screensaver {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
 }
 
 .screensaver-content {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .screensaver img, .screensaver video {
-    width: 100%;
     height: 100%;
+    max-width: 100%;
+    object-fit: contain;
     display: none;
 }
 
 .screensaver img.active, .screensaver video.active {
     display: block;
     animation: fadeIn 1.4s ease-in-out;
+}
+
+.try-button {
+    position: absolute;
+    top: 15%; /* Verplaatst van 50% naar 40% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 30px 60px;
+    font-size: 36px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 3px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.try-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
